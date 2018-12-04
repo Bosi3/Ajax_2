@@ -1,0 +1,77 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 100%;
+    font-family: sans-serif;
+
+    background-color: #363640;
+}
+
+h1 {
+    color: #ffffff;
+}
+#container{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+#monTitle, #monAnnee{
+    width: 28rem;
+    height: 5.6rem;
+    padding: 0 1.2rem;
+    outline: none;
+    border: none;
+    border-radius: 5px 5px 0 0;
+    background-color: rgba(255, 255, 255, 0.04);
+    font-size: 2rem;
+    text-align: center;
+    color: #4CAF50;
+}
+button{
+    color: #4CAF50;
+    background-color: #363640;
+    padding: 2%;
+    border-radius: 5px;
+    float: right;
+}
+.title, .plot, .poster, .year{
+    color: #4CAF50;
+    background-color: #363640;
+    font-size: 16px;
+}
+.plot{
+    border-radius: 5px;
+    padding: 10px;
+    border: solid #4CAF50  ; 
+    width: 200px;
+}
+.title, .year, .poster{
+    display: inline-block;
+    padding: 10px;
+}
+
+.plot{
+    width: 50%;
+    
+}
+ .poster{
+    float: right;
+    margin-right: 200px;
+    margin-top: 20px;
+}
+img{
+    margin-top: 10px;
+}
