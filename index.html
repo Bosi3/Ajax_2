@@ -10,13 +10,14 @@
 </head>
 <body>
 
-  <form method="post" id="main-form">
+  <form  method="post" id="main-form" >
     <form id='test-form'>
-        <input id="monTitle" type="text" name="movie" placeholder="Movie title" />
-        <!--<input id="monAnnee" type="text" name="annee" placeholder="Movie year" />-->
-        <ul class="results"></ul>
+        <input id="monTitle" class="search" type="search" name="movie" placeholder="Movie title" />
+        <input id="monAnnee" class="search" type="search"  name="annee" placeholder="Movie year" />
+        <ul class="results">Bla</ul>
     </form>
-    <button id="submit-form" type="submit" onclick="request(readData);">Go!</button>
+   <!-- <input type="submit" value="Envoyer !">-->
+    <button id="submit-form" type="submit" >Go!</button>
 </form>
 
 <div id="container">
@@ -39,6 +40,6 @@
       
 
 
-<script type="text/javascript" src="js/script4.js"></script>
+<script type="text/javascript" src="js/script7.js"></script>
 </body>
 </html>
