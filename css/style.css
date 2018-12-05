@@ -40,6 +40,12 @@ h1 {
     text-align: center;
     color: #4CAF50;
 }
+.results{
+    background-color:#363640;
+    color: #4CAF50;
+    list-style-type: none;
+    font-size: 1.5rem;
+}
 button{
     color: #4CAF50;
     background-color: #363640;
