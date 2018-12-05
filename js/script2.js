@@ -26,26 +26,24 @@ let xhr = new XMLHttpRequest;
                     //return server response as an object with JSON.parse
                     console.log(JSON.parse(this.responseText));
                     let myArr =JSON.parse(this.responseText)
-                    fetch(`https://www.omdbapi.com/?apikey=${key}&t=+The+Godfather`)
+                    fetch(`https://www.omdbapi.com/?apikey=${key}&s=+The`)
                     .then(res => res.json())//response type
-
-
-                    .then(jsonData => createResultList(jsonData));
-                     myFunction(myArr);
-                    //console.log( jsonData);
+                    .then(jsonData => data(jsonData));
+                    // myFunction(myArr);
+                    console.log( data);
                     //.then(data => console.log(data.Year)) //log the data;
                     //.then(data => console.log(data.Poster));
         }
-                }
+    }        
     //call send
     xhr.send();
-    
-    xhr.onreadystatechange=(e)=>{
+}
+/*    xhr.onreadystatechange=(e)=>{
 
        
 console.log(xhr.responseText)
-}
-    async function getData() 
+}*/
+   /* async function getData() 
     {
         //await the response of the fetch call
        let response = await fetch(`https://www.omdbapi.com/?apikey=${key}&t=+The+Godfather`);
@@ -68,4 +66,4 @@ function myFunction(arr) {
         arr[i].display + '</a><br>';
     }
     document.querySelector(".title").innerHTML = out;
-}
+}*/

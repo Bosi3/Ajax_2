@@ -26,7 +26,7 @@ function formValidated(e)  {
     async function getData() 
     {
         //await the response of the fetch call
-       let response = await fetch(`https://www.omdbapi.com/?apikey=${key}&s=${theTitle}&y=${theYear}`);
+       let response = await fetch(`https://www.omdbapi.com/?apikey=${key}&t=${theTitle}&y=${theYear}`);
         //proceed once the first promise is resolved.
        let data = await response.json()
         //proceed only when the second promise is resolved
@@ -43,7 +43,7 @@ const display = (film) => {
         monPlot.innerHTML = `Plot:<br> ${film.Plot}`;
         var poster = document.querySelector('.poster');
 
-        poster.innerHTML = `Poster:<br><img width="100" height="100" src=" ${film.Poster} " onclick="next ()">`
+        poster.innerHTML = `Poster:<br><img width="100" height="100" src="${film.Poster}">`
         //let monPoster = document.getElementById("myImg").src;
         //monPoster.innerHTML = film.Poster;
         let monYear = document.querySelector(".year");

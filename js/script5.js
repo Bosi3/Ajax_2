@@ -16,14 +16,35 @@ function formValidated(e)  {
         theTitle = entryForm[1];
         //console.log(theTitle)
        };
-       if(entryForm[0] == "annee"){
+       /*if(entryForm[0] == "annee"){
         theYear = entryForm[1];
        };
-      
+      */
     }
-    console.log(theTitle, theYear )
-
-    async function getData() 
+    //console.log(theTitle, theYear )
+    const search = value => {
+        //Call the open function, GET-type of request, url, true-asynchronous
+ xhr.open('GET', `https://www.omdbapi.com/?apikey=${key}&s=${theTitle}`, true)
+ //call the onload 
+ xhr.onload = function() 
+     {
+         //check if the status is 200(means everything is okay)
+         if (this.status === 200) 
+             {
+                 //return server response as an object with JSON.parse
+                console.log(JSON.parse(this.responseText));
+                fetch(`https://www.omdbapi.com/?apikey=${key}&s=${theTitle}`)
+                .then(res => res.json())//response type
+                .then(data => console.log(data));
+                 //console.log( data.Year);
+                 //.then(data => console.log(data.Year)) //log the data;
+                 //.then(data => console.log(data.Title));
+     }
+             }
+ //call send
+     xhr.send();
+            
+/*    async function getData() 
     {
         //await the response of the fetch call
        let response = await fetch(`https://www.omdbapi.com/?apikey=${key}&s=${theTitle}&y=${theYear}`);
@@ -48,6 +69,8 @@ const display = (film) => {
         //monPoster.innerHTML = film.Poster;
         let monYear = document.querySelector(".year");
         monYear.innerHTML = `Year:<br> ${film.Year}`;
-        //https://www.omdbapi.com/?apikey=a49f54f4&t=blade
+       
 }
-}
+*/
+    }
+}    
